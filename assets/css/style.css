@@ -663,7 +663,9 @@ button {
 /* =========================
     AGENCY MANAGEMENT START
 ========================== */
-.agency-management-area {}
+.agency-management-area {
+    padding-bottom: 120px;
+}
 .agency-title h2 {
     text-transform: capitalize;
 }
@@ -723,6 +725,55 @@ button {
     font-weight: 600;
 }
 
+/* =========================
+    AGENCY MANAGEMENT END
+========================== */
+.profitabilty-area {}
+.profitabilty-title h2 {
+    font-size: 55px;
+    line-height: 118.182%;
+    text-transform: capitalize;
+    padding-bottom: 60px;
+}
+.profitabilty-box {
+    position: relative;
+    overflow: hidden;
+}
+.profitabilty-box img {
+    width: 100%!important;
+}
+.profitabilty-hover {
+    position: absolute;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 34, 34, 0)), to(#222));
+    background: linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, #222 100%);
+    padding: 30px;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: scale(0.9) skew(10deg);
+    transform: scale(0.9) skew(20deg);
+}
+.profitabilty-box:hover .profitabilty-hover {
+    opacity: 1;
+    transform: scale(1) skew(0) ;
+}
+.profitabilty-hover h5 {
+    color: #fff;
+}
+.profitabilty-hover p {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    color: #fff;
+}
+.profitabilty-btn {
+    background: transparent;
+    border:1px solid var(--color-primary-orange);
+}
+.profitabilty-btn:hover {
+    background: var(--color-primary-orange);
+}
 /* =========================
     AGENCY MANAGEMENT END
 ========================== */
