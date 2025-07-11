@@ -173,193 +173,108 @@ button {
 /*===============================
     MENU START
 ===============================*/
-.header-sticky {
-    width: 100%;
-    padding: 18px 0px;
-    position: absolute;
-    left: 0;
-    z-index: 9;
-}
-.mega-menu-wrapper {}
-.menu-area {
-    position: relative;
-}
-.main-menu .menu-style-2 {}
 .main-menu-content {}
-.main-menu-content ul {}
+.main-menu-content ul {
+   
+}
 .main-menu-content ul li {
+    position: relative;
     padding: 0 53px 0 0;
-    display: inline-block;
+    display: block;
 }
 .main-menu-content ul li a {
-    padding: 12px 0;
+    padding: 9px 0;
+    display: inline-block;
+
 }
-.main-menu-content ul li.has-dropdown {
-    position: relative;
-}
-.main-menu-content ul li.has-dropdown a {}
-.main-menu-content ul li.has-dropdown .submenu {
+.main-menu-content .dropdown ul {
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 220px;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all ease 0.4s;
-    transition: all ease 0.4s;
-    -webkit-transform-origin: 0 0 0;
-            transform-origin: 0 0 0;
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
-}
-.main-menu-content ul li.has-dropdown:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-}
-.main-menu-content ul li.has-dropdown ul li {
-    display: block!important;
-}
-.main-menu-content ul li.has-dropdown ul.submenu li {
-    position: relative;
-}
-.main-menu-content ul li.has-dropdown ul.submenu li ul.submenu {
-    visibility: hidden;
-    opacity: 0;
-    left: auto;
-    top: 50%;
-    right: 100%;
-    -webkit-transition: all ease 0.4s;
-    transition: all ease 0.4s;
-    -webkit-transform-origin: 0 0 0;
-            transform-origin: 0 0 0;
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
-}
-.main-menu-content ul li.has-dropdown ul.submenu li:hover ul.submenu {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-}
-
-.main-menu-content ul li.has-dropdown > a,
-.main-menu-content ul li.has-mega-menu > a {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px; 
-}
-
-.main-menu-content ul li.has-dropdown > a::after,
-.main-menu-content ul li.has-mega-menu > a::after {
-  content: "\f282"; 
-  font-family: "bootstrap-icons" !important;
-  font-size: 11px;
-  color: #111;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.main-menu-content ul li.has-dropdown:hover > a::after,
-.main-menu-content ul li.has-mega-menu:hover > a::after {
-  transform: rotate(180deg);
-}
-
-
-
-.main-menu-content ul li.has-dropdown ul.submenu li > a {
-  position: relative;
-  padding-right: 18px; 
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.main-menu-content ul li.has-dropdown ul.submenu li > a::after {
-  content: "\f285";
-  font-family: "bootstrap-icons" !important;
-  font-size: 12px;
-  color: #000;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s ease;
-}
-
-.main-menu-content ul li.has-dropdown ul.submenu li:hover > a::after {
-  transform: translateY(-50%) rotate(90deg);
-}
-
-.main-menu-content ul li.has-mega-menu {
-    position: static;
-}
-.main-menu-content ul li.has-mega-menu a {}
-.main-menu-content ul li.has-mega-menu .home-menu.mega-menu {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    left: 0;
-    right: 0;
-    top: 47px;
-    -webkit-transition: all ease 0.4s;
-    transition: all ease 0.4s;
-    z-index: 5;
-    border-radius: 28px;
-    padding: 34px 15px;
+    content: "";
     background: #f3f3f3;
-    max-width: 98%;
-    margin: 0 auto;
-    -webkit-transform-origin: 0 0 0;
-            transform-origin: 0 0 0;
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
-    opacity: 0;
+    min-width: 200px;
+    height: auto;
     visibility: hidden;
-    pointer-events: none;
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+    opacity: 0;
 }
-.main-menu-content ul li.has-mega-menu:hover .home-menu.mega-menu {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    opacity: 1;
+.main-menu-content .dropdown:hover ul {
     visibility: visible;
-    pointer-events: all;
+    opacity: 1;
 }
-.home-menu-item {
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    background-color: rgba(0, 0, 0, 0.08);
-    padding: 8px;
-    border-radius: 8px;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+.main-menu-content .dropdown > a {
+    position: relative;
 }
-.home-menu-item:hover {
-        -webkit-transform: translateY(-7px);
-            transform: translateY(-7px);
-    background-color: rgba(221, 96, 19, 0.2);
-    border: 2px solid rgba(221, 96, 19, 0.4);
-}
-.home-menu-item a {}
-.home-menu-thumb {
-    overflow: hidden;
-}
-.home-menu-content {
-    text-align: center;
+.main-menu-content .dropdown > a::after {
+    position: absolute;
+    left: 106%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 11px;
+    font-family: bootstrap-icons !important;
+    content: "\f282";
+    -webkit-text-stroke: 1px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-/*===============================
-    MENU END
-===============================*/
+.main-menu-content .dropdown ul li.dropdown ul {
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: auto;
+    right: 100%;
+}
+.main-menu-content .dropdown ul li.dropdown:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+.main-menu-content li.dropdown ul li.dropdown > a {
+    width: 100%;
+}
+.main-menu-content li.dropdown ul li.dropdown > a::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 10px;
+    font-family: bootstrap-icons !important;
+    -webkit-text-stroke: 1px;
+    content: "\f285";
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #000;
+    display: inline-block;
+}
+
 
 /*===============================
     HERO STAR
 ===============================*/
 .hero-area {
     padding: 180px 0 282px;
+}
+@media only screen and (max-width: 767.98px) {
+  .hero-area {
+    padding: 3000px 0 2000px;
+  }
+}
+@media only screen and (max-width: 1399.98px) {
+  .hero-area {
+    padding: 180px 0 282px;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .hero-area {
+    padding: 120px 0 282px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .hero-area {
+    padding: 90px 0 600px;
+    }
 }
 .hero-text-info {
     position: relative;
@@ -368,10 +283,42 @@ button {
     font-size: 90px;
     line-height: 120%;
 }
+@media only screen and (max-width: 1399.98px) {
+  .hero-text-info h1 {
+    font-size: 79px;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .hero-text-info h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+.hero-text-info h1 {
+    font-size: 49px;
+    text-align: center;
+}
+}
+
 .hero-text-info p {
     font-size: 22px;
     margin: 40px 0 50px;
     max-width: 490px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .hero-text-info p {
+    max-width: 420px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .hero-text-info p {
+        max-width: 570px;
+        margin: 25px auto 40px;
+    }
 }
 .hero-btn-wrap ul {
     gap: 20px;
@@ -385,6 +332,21 @@ button {
     max-width: 575px;
     right: 20px;
     bottom: -250px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .hero-three-img {
+    height: 620px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .hero-three-img {
+        height: 550px;
+        bottom: -600px;
+        right: auto;
+    }
 }
 .hero-three-img-info {
     background: #fff;
@@ -422,6 +384,10 @@ button {
 .goals-area {
     padding: 120px 0;
 }
+@media only screen and (max-width:991.98px) {
+    padding: 90px 0;
+}
+
 .section-title h2 {
     font-size: 100px;
     line-height: 120%;
@@ -431,11 +397,41 @@ button {
     text-transform: uppercase;
      padding-bottom: 60px;
 }
+@media only screen and (max-width: 1399.98px) {
+     .section-title h2 {
+        font-size: 80px;
+    }
+}
+@media only screen and (max-width:1199.98px) { 
+    .section-title h2 {
+        font-size: 60px;
+    }
+}
+@media only screen and (max-width:991.98px) {
+     .section-title h2 {
+        font-size: 50px;
+    }
+}
 .goals-text-box {
-    padding: 40px;
+    padding: 20px;
     background-color: #F0F0F0;
-    transition: all 0.3s ;
+    transition: all 0.3s;
     position: relative;
+}
+@media only screen and (max-width:1199.98px) {
+    .goals-text-box {
+        padding: 50px;
+    }
+}
+@media only screen and (max-width:991.98px) {
+      .goals-text-box {
+        padding: 50px;
+    }
+}
+@media only screen and (max-width:767.98px) {
+      .goals-text-box {
+        padding: 50px;
+    }
 }
 .goals-text-box:hover {
     transform: translateY(5px);
@@ -524,6 +520,22 @@ button {
     white-space: nowrap;
     color: #fff;
 }
+
+@media only screen and (max-width:1398.98px) {
+    .brand-single ul li h3 {
+        font-size: 46px;
+    }
+}
+@media only screen and (max-width:1198.98px) {
+    .brand-single ul li h3 {
+        font-size: 36px;
+    }
+}
+@media only screen and (max-width:991.98px) {
+    .brand-single ul li h3 {
+        font-size: 30px;
+    }
+}
 /* =========================
     CTA END
 ========================== */
@@ -534,11 +546,20 @@ button {
 .about_us {
     padding-top: 120px;
 }  
+@media only screen and (max-width:991.98px) {
+    .about_us {
+        padding-top: 90px;
+    }
+
+}
 .about-left {
     padding-left: 50px;
     position: relative;
 } 
-.about_img {}  
+.about_img img {
+    width: 100%;
+    height: 100%;
+}
 .about-client-review {
     position: absolute;
     content: "";
@@ -570,6 +591,16 @@ button {
     font-size: 56px;
     line-height: 118.182%;
     margin-bottom:24px ;
+}
+@media only screen and (max-width:1198.98px) {
+    .about_text h3 {
+        font-size: 47px;
+    }
+}
+@media only screen and (max-width:991.98px) {
+    .about_text h3 {
+        font-size: 35px;
+    }
 }
 .about_text p, .about_text span {
     font-weight: 400;

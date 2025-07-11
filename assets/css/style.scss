@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+
+/* Media Query Variable */
+$max-xs: "only screen and (max-width: 575.98px)";
+$max-sm: "only screen and (max-width: 767.98px)";
+$max-md: "only screen and (max-width: 991.98px)";
+$max-lg: "only screen and (max-width: 1199.98px)";
+$max-xl: "only screen and (max-width: 1399.98px)";
+$max-xxl: "only screen and (max-width: 1599.98px)";
+
+$min-sm: "only screen and (min-width: 576px)";
+$min-md: "only screen and (min-width: 768px)";
+$min-lg: "only screen and (min-width: 992px)";
+$min-xl: "only screen and (min-width: 1200px)";
+$min-xxl: "only screen and (min-width: 1400px)";
+$min-xxxl: "only screen and (min-width: 1600px)";
+
+$min-max-sm: "only screen and (min-width: 576px) and (max-width: 767px)";
+$min-max-md: "only screen and (min-width: 768px) and (max-width: 991px)";
+$min-max-lg: "only screen and (min-width: 992px) and (max-width: 1200px)";
+$min-max-xl: "only screen and (min-width: 1200px) and (max-width: 1400px)";
+$min-max-xxl: "only screen and (min-width: 1400px) and (max-width: 1600px)";
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0;
+  font-family: var(--ff-plus-jakarta);
+  color: var(--color-black);
+  font-weight: 700;
+  text-transform: capitalize; 
+}
+
+h1 {
+  &.h1 {
+    font-size: 105px;
+    line-height: 120%;
+  }
+}
+
+h2 {
+  &.h2 {
+    font-size: 100px;
+    line-height: 120%;
+  }
+}
+
+h3 {
+  &.h3 {
+    font-size: 55px;
+    line-height: 118.182%;
+  }
+}
+
+h4 {
+  &.h4 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+}
+
+h5 {
+  &.h5 {
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+
+h6 {
+  &.h6 {
+    font-size: 18px;
+    line-height: 170%;
+  }
+}
+
+@media #{$max-xl} {
+  h1 {
+    &.h1 {
+      font-size: 90px;
+    }
+  }
+
+  h2 {
+    &.h2 {
+      font-size: 80px;
+    }
+  }
+}
+
+
+@media #{$max-lg} {
+  h1 {
+    &.h1 {
+      font-size: 70px;
+    }
+  }
+  h2 {
+    &.h2 {
+      font-size: 60px;
+    }
+  }
+  h3 {
+    &.h3 {
+      font-size: 48px;
+    }
+  }
+}
+
+
+@media #{$max-md} {
+  h1 {
+    &.h1 {
+      font-size: 55px;
+    }
+  }
+  h2 {
+    &.h2 {
+      font-size: 45px;
+    }
+  }
+  h3 {
+    &.h3 {
+      font-size: 35px;
+    }
+  }
+  h4 {
+    &.h4 {
+      font-size: 25px;
+    }
+  }
+  h5 {
+    &.h5 {
+      font-size: 20px;
+    }
+  }
+}
+
+html,
+body {
+  font-weight: 400;
+  font-size: 20px;
+  line-height:136%;
+  color: var(--color-light-black);
+  font-family: var(--ff-dm-sans);
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/*================================================
+ Hero CSS
+=================================================*/
+
+
+@media only screen and (max-width: 1399.98px) {
+  .hero-text-info h1 {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .hero-text-info h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .hero-text-info h1 {
+    font-size: 50px;
+  }
+}
