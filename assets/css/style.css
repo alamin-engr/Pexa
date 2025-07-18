@@ -993,16 +993,4 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   .agency-right-text ul li {
     font-size: 18px;
   }
-}
-/*==============================
-      PROFITABILITY START
-==============================*/
-.profitability-area {
-  padding: 0 0 120px 0;
-}
-
-.profitability-heading h2 {
-  font-size: 55px;
-  line-height: 118.182%;
-  margin-bottom: 60px;
 }/*# sourceMappingURL=style.css.map */

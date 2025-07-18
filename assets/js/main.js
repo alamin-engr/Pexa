@@ -30,33 +30,7 @@
     },
   });
 
-const swiper = new Swiper('.profitability-slider', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: '.profitability-button-next',
-    prevEl: '.profitability-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-  }
-});
+
 
 }(jQuery));
 
