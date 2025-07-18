@@ -1,3 +1,7 @@
+
+/*================================================
+1. Default CSS
+=================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
@@ -25,6 +29,40 @@ $min-max-lg: "only screen and (min-width: 992px) and (max-width: 1200px)";
 $min-max-xl: "only screen and (min-width: 1200px) and (max-width: 1400px)";
 $min-max-xxl: "only screen and (min-width: 1400px) and (max-width: 1600px)";
 
+/*CSS Variable*/
+:root {
+  /*font Variable*/
+  --ff-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+  --ff-dm-sans: "DM Sans", sans-serif;
+
+  /*Color Variable*/
+  --color-primary-orange: #DD6013;
+  --color-black:#222;
+  --color-light-black:#4E4E4E;
+  --color-cream-white: #CCC;
+}
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+  color: unset;
+  text-decoration: none;
+
+  &:focus {
+    outline: 0 solid;
+  }
+  &:hover {
+    text-decoration: none;
+    color: unset;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 h1,
 h2,
@@ -162,25 +200,859 @@ p {
   margin-bottom: 0;
 }
 
-/*================================================
- Hero CSS
-=================================================*/
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+ul.custom-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 
-@media only screen and (max-width: 1399.98px) {
-  .hero-text-info h1 {
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+
+  &:hover,
+  &:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  }
+}
+
+/* Common Class */
+
+.section-margin-top {
+  margin-top: 120px;
+}
+
+.section-margin-bottom {
+  margin-bottom: 120px;
+}
+
+.row-top-margin {
+  margin-top: 60px;
+}
+
+.section-padding-top {
+  padding-top: 120px;
+}
+
+.section-padding-bottom {
+  padding-bottom: 120px;
+}
+
+.row-top-padding {
+  padding-top: 60px;
+}
+
+.row-bottom-padding {
+  padding-bottom: 60px;
+}
+
+
+@media #{$max-md} {
+  .section-margin-top {
+    margin-top: 60px;
+  }
+
+  .section-margin-bottom {
+    margin-bottom: 60px;
+  }
+
+  .row-top-margin {
+    margin-top: 30px;
+  }
+
+  .section-padding-top {
+    padding-top: 60px;
+  }
+
+  .section-padding-bottom {
+    padding-bottom: 60px;
+  }
+
+  .row-top-padding {
+    padding-top: 30px;
+  }
+
+  .row-bottom-padding {
+    padding-bottom: 30px;
+  }
+}
+
+// Global Utilities 
+
+.z-index-one {
+  z-index: 1 !important;
+}
+
+.z-index-minus-one {
+  z-index: -1 !important;
+}
+
+.section-middle {
+  margin: 0 auto;
+}
+
+.ft_object {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.max_wd_content {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/* Common Class End */
+
+// Template Utilities
+
+.bg-color-off-white{
+  background-color: #EAEAEA;
+}
+
+.bg-color-light-white{
+  background-color: #F0F0F0;
+}
+
+.bg-color-light-gradient{
+  background: linear-gradient(180deg, #FFF 0%, rgba(153, 153, 153, .3) 100%);
+}
+
+.bg_color_black{
+  background-color: #1A1A1A;
+}
+
+.border-radius-10{
+  border-radius: 10px;
+}
+
+.text_color_off_white{
+  color: var(--color-cream-white);
+}
+
+.text_color_low_white{
+  color: var(--color-light-black);
+}
+
+/*===============================
+    MENU START
+===============================*/
+.menu-area {
+  width: 100%;
+  padding: 18px 0px;
+  position: absolute;
+  left: 0;
+  z-index: 9;
+}
+.home-menu {
+  position: relative;
+}
+
+.main-menu ul li {
+  position: relative;
+  padding: 0 53px 0 0;
+  display: inline-block;
+}
+.main-menu ul li > a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+}
+.main-menu ul .drop-down.has-megamenu {
+  position: static;
+
+}
+.submenu {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  background: #f3f3f3;
+  padding: 50px;
+  transition: all .5s;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  opacity: 0;
+  visibility: visible;
+}
+.main-menu ul li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+.main-menu li ul {
+  position: absolute;
+  left: 0;
+  height: auto;
+  background: #f3f3f3;
+  min-width: 200px;
+  padding: 10px 13px;
+  border-radius: 18px;
+  transition: all .5s;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.main-menu li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+.main-menu li ul li {
+  display: block;
+}
+.main-menu li ul li ul {
+  left: auto;
+  right: 100%;
+  top: 50%;
+  width: 220px;
+  
+}
+
+
+/*==============================
+        Hero Start
+==============================*/
+
+.hero-area {
+  background-color: #ddd;
+}
+
+.hero-content {
+    padding: 180px 0 282px;
+}
+@media only screen and (max-width:991.98px) {
+  .hero-content {
+    padding: 90px 0 90px;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .hero-content {
+    padding: 60px 0 60px;
+  }
+}
+.hero-heading h1 {
+  font-size: 90px;
+  line-height: 120%;
+}
+@media only screen and (max-width:1399.98px) {
+  .hero-heading h1 {
     font-size: 80px;
   }
 }
-
-@media only screen and (max-width: 1199.98px) {
-  .hero-text-info h1 {
+@media only screen and (max-width:1199.98px) {
+  .hero-heading h1 {
     font-size: 60px;
   }
 }
-
-@media only screen and (max-width: 991.98px) {
-  .hero-text-info h1 {
+@media only screen and (max-width:991.98px) {
+  .hero-heading h1 {
     font-size: 50px;
+    text-align: center;
   }
+}
+@media only screen and (max-width:767.98px) {
+  .hero-heading h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .hero-heading h1 {
+    font-size: 32px;
+  }
+}
+.hero-heading p {
+  font-size: 22px;
+  margin: 40px 0 50px;
+  max-width: 520px;
+}
+@media only screen and (max-width:1199.98px) {
+  .hero-heading p {
+    max-width: 420px;
+  }
+}
+@media only screen and (max-width:991.98px) {
+  .hero-heading p {
+    max-width: 600px;
+    margin: 25px auto 40px;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .hero-heading p {
+    max-width: 560px;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .hero-heading p {
+    max-width: 470px;
+    font-size: 18px;
+  }
+}
+.hero-button {
+  gap: 10px;
+}
+.common-btn {
+  border: none;
+  background-color: #1A1A1A;
+  color: #FFF;
+  padding: 14px 19px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all .3s;
+}
+.common-btn:hover {
+    transform: translateY(-3px);
+    color: #fff;
+}
+.common-btn.two {
+  background-color: #fff;
+  color: #1A1A1A;
+}
+.common-btn.two:hover {
+  background-color: red;
+  color: #fff;
+}
+@media only screen and (max-width:991.98px) {
+  .hero-button {
+    justify-content: center;
+  }
+}
+.hero-image {
+  position: absolute;
+  height: 669px;
+  max-width: 575px;
+  right: 20px;
+  bottom: 0;
+}
+@media only screen and (max-width:991.98px) { 
+  .hero-image {
+    display: none;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .hero-area .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero-image {
+    position: relative;
+    width: auto;
+    height: 400px;
+    margin-bottom: 20px;
+    right: 0;
+    display: block;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .hero-image {
+    width: auto;
+    height: 300px;
+  }
+}
+
+
+/*==============================
+        GOALS Start
+==============================*/
+.goals-area {
+  padding: 120px 0;
+}
+@media only screen and (max-width:991.98px) {
+  .goals-area {
+    padding: 90px 0;
+  }
+}
+@media only screen and (max-width:767px) {
+  .goals-area {
+    padding: 60px 0;
+  }
+}
+.goals-heading {
+  padding-bottom: 60px;
+}
+.goals-heading h2 {
+  font-size: 100px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+@media only screen and (max-width:1399.98px) {
+  .goals-heading h2 {
+    font-size: 80px;
+  }
+}
+@media only screen and (max-width:1199.98px) {
+  .goals-heading h2 {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width:991.98px) {
+  .goals-heading h2 {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .goals-heading h2 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .goals-heading h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+.goals-box {
+  background-color: #F0F0F0;
+  padding:40px ;
+  transition: all .3s;
+  transform: scaleY(1);
+}
+.goals-box:hover {
+ transform: translateY(-5px);
+}
+@media only screen and (max-width:1399.98px) {
+  .goals-box {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width:1199.98px) {
+  .goals-box {
+    padding: 25px;
+  }
+}
+.goals-box-icon {
+  padding-top: 15px;
+  padding-left: 10px;
+  position: relative;
+  z-index: 1;
+}
+.goals-box-icon::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: #ddd;
+  z-index: -1;
+  top: 0;
+  left: 0; 
+  border-radius: 50%;
+  transition: all .3s;
+}
+.goals-box:hover .goals-box-icon::after {
+  background-color: red;
+}
+.goals-box-info h5 {
+  margin: 24px 0 8px 0;
+  font-size: 22px;
+  line-height: 120%;
+}
+@media only screen and (max-width:1199.98px) {
+  .goals-box-info h5 {
+    font-size: 18px;
+  }
+}
+.goals-box-info p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 136%;
+}
+@media only screen and (max-width:1199.98px) {
+  .goals-box-info p {
+    font-size: 18px;
+  }
+}
+
+/*==============================
+       CTA Start
+==============================*/
+
+
+.cta-area {
+  background-color: #0B2131;
+  padding: 30px 0;
+}
+.cta-item {
+  align-items: center;
+}
+.cta-icon svg {
+  color: #fff;
+}
+.cta-item h3 {
+  color: #fff;
+  font-size: 55px;
+  line-height: 118.182%;
+}
+@media only screen and (max-width:1199.98px) {
+  .cta-item h3 {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width:991.98px) {
+  .cta-item h3 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .cta-item h3 {
+    font-size: 30px;
+  }
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.swiper-slide {
+  width: auto;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important; 
+}
+
+/*==============================
+      ABOUT
+==============================*/
+.about-area {
+  padding: 120px 0;
+}
+@media only screen and (max-width:1199.98px) {
+  .about-area {
+    padding: 90px 0;
+  }
+}
+@media only screen and (max-width:991.98px) {
+  .about-area {
+    padding: 60px 0;
+  }
+}
+.about-left {
+  padding-left: 50px;
+  position: relative;
+}
+.about-counter {
+  padding: 30px 20px;
+  -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.06);
+  gap: 10px;
+  left: 0;
+  bottom: 100px;
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  position: absolute;
+}
+.about-counter h3 {
+  line-height: 1;
+  font-size: 55px;
+}
+.about-counter p {
+  max-width: 101px;
+  text-align: start;
+ 
+}
+.about-right-text h2 {
+  font-size: 55px;
+  line-height: 118.182%;
+}
+@media only screen and (max-width:1199.98px) {
+  .about-right-text h2 {
+    font-size: 46px;
+  }
+}
+@media only screen and (max-width:991.98px) {
+  .about-right-text h2 {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .about-right-text h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .about-right-text h2 {
+    font-size: 26px;
+  }
+}
+.about-right-text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 136%;
+}
+@media only screen and (max-width:1199.98px) {
+  .about-right-text p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .about-right-text p {
+    font-size: 16px;
+  }
+}
+.about-button .common-btn {
+  border-radius: 0;
+}
+/*==============================
+      SERVICE
+==============================*/
+.service-area {
+  padding: 0 0 120px 0;
+  margin-bottom: 120px;
+  border: 1px solid #222;
+}
+@media only screen and (max-width:991.98px) {
+  .service-area {
+    margin-top: 90px;
+    padding: 0 0 90px 0;
+    margin-bottom: 90px;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .service-area {
+    margin-top: 0px;
+    padding: 0 0 60px 0;
+    margin-bottom: 60px;
+  }
+}
+.section-title {
+  margin-bottom: 120px;
+}
+@media only screen and (max-width:991.98px) {
+  .section-title{
+    margin-bottom: 90px;
+  }
+}
+@media only screen and (max-width:767.98px) {
+  .section-title{
+    margin-bottom: 60px;
+  }
+}
+.service-heading {
+  background-color: #fff;
+  padding: 0 70px;
+  margin-top: -50px;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+}
+@media only screen and (max-width:767.98px) {
+  .service-heading {
+    background-color: #fff;
+    padding: 0 0px;
+    margin-top: 50px;
+  }
+}
+.service-heading h2 {
+  font-size: 55px;
+  line-height: 118.182%;
+}
+@media only screen and (max-width:767.98px) {
+  .service-heading h2  {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .service-heading h2  {
+    font-size: 30px;
+  }
+}
+.service-item {
+  padding-top: 20px;
+}
+.service-box {
+  border:1px solid #ccc ;
+  border-radius: 10px;
+  padding: 0 40px 40px;
+  transition: all .5s;
+  transform: translateY(0px);
+}
+.service-box:hover {
+  transform: translateY(-5px);
+}
+@media only screen and (max-width:991.98px) {
+  .service-box  {
+    padding: 0 30px 30px;
+  }
+}
+.service-icon {
+  background-color: #fff;
+  max-width: 100px;
+  margin-top: -20px;
+  text-align: center;
+}
+.service-box:hover .service-icon {
+  color: red;
+}
+.service-box h3 {
+  margin-top: 50px;
+  margin-bottom: 16px;
+  font-size: 30px;
+  line-height: 1.1;
+}
+.service-box p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 136%
+}
+@media only screen and (max-width:575.98px) {
+  .service-box p  {
+    font-size: 16px;
+  }
+}
+
+/*==============================
+      AGENCY MANAGEMENT START
+==============================*/
+
+.agency-area {
+  padding: 0 0 120px 0;
+}
+@media only screen and (max-width:991.98px) {
+  .agency-area {
+    padding: 0 0 60px 0;
+  }
+}
+.agency-heading h2 {
+  font-size: 100px;
+  line-height: 120%;
+  margin-bottom: 60px;
+}
+@media only screen and (max-width:1399.98px) {
+  .agency-heading h2  {
+    font-size: 80px;
+  }
+}
+@media only screen and (max-width:991.98px) {
+  .agency-heading h2  {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width:575.98px) {
+  .agency-heading h2  {
+    font-size: 30px;
+  }
+}
+.agency-left-text {
+  text-align: right;
+}
+@media only screen and (max-width:991.98px) {
+  .agency-left-text  {
+    text-align: left;
+  }
+}
+.agency-left-text h5 {
+  margin: 8px 0;
+  font-size: 22px;
+  line-height: 120%;
+}
+.agency-left-text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 136%;
+}
+.agency-counter {
+  margin-top: 16px;
+  background-color: #F0F0F0;
+  padding: 35px 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.agency-counter h3 {
+  font-size: 55px;
+  color: #ccc;
+}
+.agency-counter span {
+  max-width: 101px;
+  text-align: start;
+}
+.agency-image img {
+  border-radius: 10px;
+}
+.agency-right-text h5 {
+  margin: 8px 0;
+  font-size: 22px;
+  line-height: 120%;
+}
+.agency-right-text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 136%;
+}
+.agency-right-text ul {
+  margin-top: 16px;
+}
+.agency-right-text ul li + li {
+  margin-top: 8px;
+}
+.agency-right-text ul li {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media only screen and (max-width:1199.98px) { 
+  .agency-right-text ul li {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width:991.98px) {
+ .agency-right-text ul li {
+    font-size: 18px;
+  }
+}
+/*==============================
+      PROFITABILITY START
+==============================*/
+
+// .profitability-button-prev,
+// .profitability-button-next {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   cursor: pointer;
+//   z-index: 10;
+//   color: red; /* আপনার পছন্দমত কালার */
+// }
+
+// .profitability-button-prev {
+//   left: 10px;
+// }
+
+// .profitability-button-next {
+//   right: 10px;
+// }
+
+
+
+.profitability-area {
+  padding: 0 0 120px 0;
+}
+.profitability-heading h2 {
+  font-size: 55px;
+  line-height: 118.182%;
+  margin-bottom: 60px;
 }
